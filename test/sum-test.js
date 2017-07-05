@@ -14,5 +14,17 @@ describe ('Sum', function() {
       expect(sum()).to.equal(0);
       assert.equal(sum(),0);
     });
-    
+
+    it('Should return sum of arguments.', function(){
+      expect(sum([1,2,3])).to.equal(6);
+    });
+
+    it('Should return invalid if arguments are not a number.', function(){
+      assert.equal(sum(['a',2,3]), 'Invalid');
+    });
+
+    it('Should return AWESOME ADAM if sum greater than 100', function(){
+      assert.equal(sum([1,99]), 'AWESOME ADAM');
+    });
+
 });
